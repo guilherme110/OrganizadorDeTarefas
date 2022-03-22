@@ -29,6 +29,7 @@ let t1 = Tarefas(tarefa: "Varrer casa", tempoExecucao: 0.3)
 let t2 = Tarefas(tarefa: "Passar pano", tempoExecucao: 1.0)
 let t3 = Tarefas(tarefa: "Lavar louça", tempoExecucao: 0.5)
 let t4 = Tarefas(tarefa: "Arrumar quartos", tempoExecucao: 2.3)
+let t5 = Tarefas(tarefa: "Lavar banheiro", tempoExecucao: 0.4)
 
 let tarefasDaCasa: [Tarefas] = [t1, t2, t3, t4]
 
