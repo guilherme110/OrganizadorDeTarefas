@@ -2,7 +2,7 @@ import Foundation
 
 struct Moradoras {
     var nome: String = ""
-    var horasDisponíveis: Float = 0.0
+    var horasDisponiveis: Float = 0.0
     
     
 }
@@ -31,11 +31,10 @@ let t3 = Tarefas(tarefa: "Lavar louça", tempoExecucao: 0.5)
 let t4 = Tarefas(tarefa: "Arrumar quartos", tempoExecucao: 2.3)
 let t5 = Tarefas(tarefa: "Lavar banheiro", tempoExecucao: 0.4)
 
-let tarefasDaCasa: [Tarefas] = [t1, t2, t3, t4]
+let tarefasDaCasa: [Tarefas] = [t1, t2, t3, t4, t5]
 
 //var t1 = Tarefas(tarefa:"Varrer casa", tempoExecucao: 0.3)
 
-//fazer um for para percorrer o array moradoras e depois adicionar as horas na variavel pessoaX.horasdisponiveis
 
 //--------------------------------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------------------------------
@@ -53,16 +52,17 @@ var SelecionarOpcao = Int(OpcaoMenu)
 
 if SelecionarOpcao == 1 {
     for moradora in pessoasDaCasa {
-        
-        var aux: Moradoras
+        //var aux: Moradoras
         print("\(moradora.nome), digite quantas horas disponíveis você terá essa semana (seg a sex)")
-        let horasAux = Float(readLine()!)!
-        aux = Moradoras(horasDisponíveis: horasAux)
+        var x = readLine()
+        x = Float(moradora.horasDisponiveis)
+        //let horasAux = Float(readLine()!)!
+        //aux = Moradoras(nome: moradora.nome, horasDisponiveis: horasAux)
         
         
     }
     for moradora in pessoasDaCasa {
-        print(moradora.nome, moradora.horasDisponíveis)
+        print(moradora.nome, moradora.horasDisponiveis)
     }
 } else if SelecionarOpcao == 2 {
     for tarefa in tarefasDaCasa {
