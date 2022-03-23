@@ -54,14 +54,20 @@ let tarefasDaCasa: [Tarefas] = [t1, t2, t3, t4, t5]
 //    }
 //}
 
-
+//encontrando a moradora com menos horas
 let moradoraComMenosHoras = pessoasDaCasa.min { $0.horasDisponiveis < $1.horasDisponiveis }
 
-print(moradoraComMenosHoras?.nome)
+print(moradoraComMenosHoras?.nome, moradoraComMenosHoras?.horasDisponiveis)
 
+//encontrando a tarefa com menor tempo de execução
 let tarefaComMenorTempoDeExecucao = tarefasDaCasa.min { $0.tempoExecucao < $1.tempoExecucao }
 
 print(tarefaComMenorTempoDeExecucao?.tarefa)
+
+//subtraindo o tempo da menor tarefa do tempo disponível da moradora com menos tempo (explicaçã0 cagada)
+moradoraComMenosHoras?.horasDisponiveis -= tarefaComMenorTempoDeExecucao!.tempoExecucao
+
+print(moradoraComMenosHoras?.nome, moradoraComMenosHoras?.horasDisponiveis)
 
 
 //--------------------------------------------------------------------------------------------------------------------
